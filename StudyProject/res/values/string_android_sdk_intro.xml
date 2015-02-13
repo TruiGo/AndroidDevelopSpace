@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="intro_message_repeatingalarm"><![CDATA[Introductory text that explains what the sample is intended to demonstrate. Edit in template-params.xml.]]></string>
+    <string name="intro_message_basicnetworking"><![CDATA[This sample demonstrates how to use the ConnectivityManager to determine if you have a network connection, and if so, what type of connection it is.\n\nA "NetworkInfo" object is retrieved from the ConnectivityManager, which contains information on the active connection, and then the connection type is printed to an on-screen console.]]></string>
+    <string name="intro_message_car_emulation"><![CDATA[This sample demonstrates how to emulate an NFC card, using the "host card emulation" feature added in Android 4.4. This sample makes the device appear as a loyalty card whenever the screen is on and the user taps their device on an appropriately configured NFC reader.The "CardReader" sample can be used to read the loyalty card implemented in this sample. ]]></string>
+    <string name="intro_message_car_reader"><![CDATA[ This sample demonstrates how to implement a low-level NFC card reader, for reading cards that do not contain NDEF or Android Beam data. This sample is designed to read the virtual loyalty card implemented in the "CardEmulation" sample.\n\n In particular, this sample demonstrates how to disable Android Beam, select which AIDs the reader is interested, and establish communication with the card ]]></string>
+    <string name="intro_message"><![CDATA[ This is the introduction message. ]]></string>
+
+</resources>

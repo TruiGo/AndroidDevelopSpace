@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:xiaotian="http://schemas.framework.xiaotian.com/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <com.xiaotian.framework.view.ViewListViewPullRefresh
+        android:id="@id/ViewListViewPullRefresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:divider="#23a323"
+        android:dividerHeight="2dp"
+        android:listSelector="@drawable/selector_color_while_gray_listviewselector"
+        xiaotian:footerTexttColor="@color/color_text_black_xiaotian"
+        xiaotian:headerTextColor="#3454d2"
+        xiaotian:mode="3"
+        xiaotian:pullFooterImage="@drawable/pulltorefresh_down_arrow"
+        xiaotian:pullHeaderImage="@drawable/pulltorefresh_up_arrow"
+        xiaotian:pullString="@string/pull_to_refresh_pull_down_label"
+        xiaotian:refreshingString="@string/pull_to_refresh_refreshing_label"
+        xiaotian:releaseString="@string/pull_to_refresh_release_label" >
+    </com.xiaotian.framework.view.ViewListViewPullRefresh>
+
+</LinearLayout>

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:columnCount="2" >
+
+        <TextView
+            style="?android:attr/textAppearanceSmall"
+            android:text="账号 : " />
+
+        <EditText
+            android:id="@id/id_0"
+            style="?android:attr/editTextPreferenceStyle"
+            android:hint="12306.cn 账号"
+            android:text="gtrstudio@qq.com" />
+
+        <TextView
+            style="?android:attr/textAppearanceSmall"
+            android:text="密码 : " />
+
+        <EditText
+            android:id="@id/id_1"
+            style="?android:attr/editTextPreferenceStyle"
+            android:hint="12306.cn 密码"
+            android:text="gtr4409" />
+
+        <TextView
+            style="?android:attr/textAppearanceSmall"
+            android:layout_gravity="center_vertical"
+            android:clickable="true"
+            android:onClick="onClickRefleshPassCodeLogin"
+            android:text="校验码 : " />
+
+        <LinearLayout android:orientation="horizontal" >
+
+            <EditText
+                android:id="@id/id_2"
+                style="?android:attr/editTextPreferenceStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="校验码" />
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:minWidth="80dp" >
+
+                <ProgressBar
+                    style="?android:attr/progressBarStyleSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center" />
+
+                <ImageView
+                    android:id="@id/id_3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:clickable="true"
+                    android:contentDescription="@string/content_notfound_xiaotian"
+                    android:onClick="onClickRefleshPassCodeLogin"
+                    android:scaleType="centerCrop" />
+            </FrameLayout>
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_columnSpan="2"
+            android:layout_marginTop="10dp"
+            android:background="@color/color_text_hint_xiaotian" />
+    </GridLayout>
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="onClickLogin"
+        android:text="登录" />
+
+</LinearLayout>

@@ -1,0 +1,1480 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.gtr.studyproject.activity"
+    android:installLocation="internalOnly"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <!-- Android 4.0以上 -->
+    <uses-sdk
+        android:minSdkVersion="17"
+        android:targetSdkVersion="19" />
+
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+
+    <!-- 震动 -->
+    <uses-permission android:name="android.permission.VIBRATE" />
+
+    <!-- BlueTooth -->
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.RECORD_VIDEO" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <!-- 读取账号信息 -->
+    <uses-permission android:name="android.permission.AUTHENTICATE_ACCOUNTS" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <!-- 允许应用读取低级别的系统日志文件 -->
+    <uses-permission android:name="android.permission.READ_LOGS" >
+    </uses-permission>
+    <!-- SDK1.5需要android.permission.GET_TASKS权限判断本程序是否为当前运行的应用? -->
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <!-- 来电消音 -->
+    <uses-permission android:name="android.permission.AUTHENTICATE_ACCOUNTS" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <!-- 使用权限:访问NFC -->
+    <uses-permission android:name="android.permission.NFC" />
+    <!-- 接收开机完成广播 -->
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <!-- 使用功能:NFC硬件,非必须 -->
+    <uses-feature
+        android:name="android.hardware.nfc"
+        android:required="false" />
+    <!-- WiFi Direct -->
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <!-- 解锁前显示权限 -->
+    <uses-permission android:name="android.permission.DISABLE_KEYGUARD" />
+    <!-- 锁屏唤醒权限 -->
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <!-- 请求注册 SyncStatusObserver 显示 "syncing..." 进度条. -->
+    <uses-permission android:name="android.permission.READ_SYNC_STATS" />
+    <!-- Required to enable our SyncAdapter after it's created. -->
+    <uses-permission android:name="android.permission.WRITE_SYNC_SETTINGS" />
+    <!-- Required because we're manually creating a new account. -->
+    <uses-permission android:name="android.permission.AUTHENTICATE_ACCOUNTS" />
+    <!-- 语音邮箱 -->
+    <uses-permission android:name="com.android.providers.contacts.VoicemailContentProvider" />
+    <uses-permission android:name="com.android.voicemail.permission.ADD_VOICEMAIL" />
+
+    <supports-screens
+        android:anyDensity="true"
+        android:largeScreens="true"
+        android:normalScreens="true"
+        android:resizeable="true"
+        android:smallScreens="true"
+        android:xlargeScreens="true" />
+
+    <application
+        android:name="com.gtr.studyproject.common.Application"
+        android:allowBackup="true"
+        android:hardwareAccelerated="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+
+        <!-- 百度SDK配置账号 -->
+        <meta-data
+            android:name="com.baidu.lbsapi.API_KEY"
+            android:value="8h4P1BDpWmv4DvYVXHycEqkN" />
+
+        <activity
+            android:name="com.gtr.studyproject.activity.train.ActivityTrain"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="Project Train"
+            android:theme="@android:style/Theme.Holo.Light.NoActionBar" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.gtr.studyproject.activity.ActivityNavigation"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/app_name"
+            android:theme="@android:style/Theme.Black.NoTitleBar" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- ************************************** My UI Activity Show In Activity Navigation ************************************** -->
+        <activity
+            android:name="com.gtr.studyproject.activity.ActivityFramelayout"
+            android:label="ActivityFramelayout" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="com.gtr.studyproject.activity.UIActivity" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.gtr.studyproject.activity.ActivitySurfaceView"
+            android:label="ActivitySurfaceView"
+            android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="com.gtr.studyproject.activity.UIActivity" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.gtr.studyproject.activity.ActivityLocalService"
+            android:label="ActivitiesLocalService" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="com.gtr.studyproject.activity.UIActivity" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.gtr.studyproject.activity.ActivityAsyncCacheLoadImage"
+            android:label="ActivityAsyncCacheLoadImage" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="com.gtr.studyproject.activity.UIActivity" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.gtr.studyproject.activity.ActivityMain"
+            android:label="ActivityMain" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="com.gtr.studyproject.activity.UIActivity" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.gtr.studyproject.activity.ActivityOtherAPKBundle"
+            android:label="ActivityOtherAPKBundle" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="com.gtr.studyproject.activity.UIActivity" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.gtr.studyproject.activity.ActivityListViewPullRefresh"
+            android:label="ActivityListViewPullRefresh" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="com.gtr.studyproject.activity.UIActivity" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.gtr.studyproject.activity.AvtivityPattern"
+            android:label="AvtivityPatternView" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="com.gtr.studyproject.activity.UIActivity" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.gtr.studyproject.activity.ActivityGesture"
+            android:label="ActivityImageGesture" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="com.gtr.studyproject.activity.UIActivity" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.gtr.studyproject.activity.ActivityGridViewPullRefresh"
+            android:label="ActivityGridViewPullRefresh" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="com.gtr.studyproject.activity.UIActivity" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.gtr.studyproject.activity.ActivityFragmentManager"
+            android:label="ActivityFragmentManager" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="com.gtr.studyproject.activity.UIActivity" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.gtr.studyproject.activity.ActivityBaiduSDK"
+            android:label="ActivityBaiduSDK" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="com.gtr.studyproject.activity.UIActivity" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.gtr.studyproject.activity.ActivityIncludePage"
+            android:label="ActivityIncludePage" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="com.gtr.studyproject.activity.UIActivity" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.gtr.studyproject.activity.ActivityPreferenceScreen"
+            android:label="ActivityPreferenceScreen" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="com.gtr.studyproject.activity.UIActivity" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.gtr.studyproject.activity.ActivityRadioRecord"
+            android:label="ActivityRadioRecord" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="com.gtr.studyproject.activity.UIActivity" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.gtr.studyproject.activity.ActivityAnimationSwitcher"
+            android:label="ActivityAnimationSwitcher" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="com.gtr.studyproject.activity.UIActivity" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.gtr.studyproject.activity.ActivityEditTextTips"
+            android:label="ActivityEditTextTips" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="com.gtr.studyproject.activity.UIActivity" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.gtr.studyproject.activity.ActivitySyncAdapter"
+            android:label="ActivitySyncAdapter" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="com.gtr.studyproject.activity.UIActivity" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.gtr.studyproject.activity.ActivitySyncAdapterLogin" />
+        <activity
+            android:name="com.gtr.studyproject.activity.ActivityCursorAdapter"
+            android:label="ActivityCursorAdapter" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="com.gtr.studyproject.activity.UIActivity" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.gtr.studyproject.activity.ActivityMixingBothIntent"
+            android:label="ActivityMixingBothIntent" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="com.gtr.studyproject.activity.UIActivity" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.gtr.studyproject.activity.ActivityNotification"
+            android:label="ActivityNotification" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="com.gtr.studyproject.activity.UIActivity" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.gtr.studyproject.activity.ActivityJSToJavaInterface"
+            android:label="ActivityJSToJavaInterface" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="com.gtr.studyproject.activity.UIActivity" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.gtr.studyproject.activity.ActivityActionBar"
+            android:label="ActivityActionBar"
+            android:uiOptions="splitActionBarWhenNarrow" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="com.gtr.studyproject.activity.UIActivity" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.gtr.studyproject.activity.ActivityActionBarNavigation"
+            android:label="ActivityActionBarNavigation" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="com.gtr.studyproject.activity.UIActivity" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.gtr.studyproject.activity.ActivityGridLayout"
+            android:label="ActivityGridLayout"
+            android:theme="@android:style/Theme.Black.NoTitleBar" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="com.gtr.studyproject.activity.UIActivity" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.gtr.studyproject.activity.ActivityPreferencesFragmentScreen"
+            android:label="ActivityPreferencesFragmentScreen" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="com.gtr.studyproject.activity.UIActivity" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.gtr.studyproject.activity.ActivityWebViewFragment"
+            android:label="ActivityWebViewFragment" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="com.gtr.studyproject.activity.UIActivity" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.gtr.studyproject.activity.ActivityBeamNFCNdefMessages"
+            android:label="ActivityBeamNFCNdefMessages" >
+
+            <!-- Main Activity 列表 -->
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="com.gtr.studyproject.activity.UIActivity" />
+            </intent-filter>
+            <!-- 配置NFC硬件触发 -->
+            <intent-filter>
+
+                <!-- NFC Android Beam Discovered  接触NFC触发 -->
+                <action android:name="android.nfc.action.NDEF_DISCOVERED" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <!-- Application Data MIME Type Filter MIME Type Notification 数据类型MIME过滤 : [打开应用程序/程序名] -->
+                <!-- 本程序的Activity根据MIMEType来过滤接收的消息数据 -->
+                <data android:mimeType="application/com.gtr.studyproject.activity" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.gtr.studyproject.activity.ActivityWiFiDirect"
+            android:label="ActivityWiFiDirect" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="com.gtr.studyproject.activity.UIActivity" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.gtr.studyproject.activity.ActivityWeiXinShare"
+            android:label="ActivityWeiXinShare" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="com.gtr.studyproject.activity.UIActivity" />
+            </intent-filter>
+        </activity>
+        <!-- ************************************** Other Package Activity ************************************** -->
+        <activity
+            android:name="com.gtr.studyproject.bluetooth.ActivityBluetoothMessage"
+            android:label="ActivityBluetoothMessage" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="com.gtr.studyproject.activity.UIActivity" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="baidumapsdk.demo.BMapApiDemoMain"
+            android:label="BaiDu Map Demo" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="com.gtr.studyproject.activity.UIActivity" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.example.android.bitmapfun.ui.ImageGridActivity"
+            android:label="BitmapFunImage" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="com.gtr.studyproject.activity.UIActivity" />
+            </intent-filter>
+        </activity>
+        <!-- ************************************** Android SDK Navigation Activity ************************************** -->
+        <activity
+            android:name="com.example.android.AndroidSDK20"
+            android:label="AndroidSDK20" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="com.gtr.studyproject.activity.UIActivity" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.example.android.ActivitySDK17"
+            android:label="AndroidSDK17" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="com.gtr.studyproject.activity.UIActivity" />
+            </intent-filter>
+        </activity>
+
+        <!-- ************************************** Support V4 Navigation Activity ************************************** -->
+        <activity
+            android:name="com.gtr.studyproject.activity.v4test.ActivityFragmentNavigation"
+            android:label="Support V4 Navigation" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="com.gtr.studyproject.activity.UIActivity" />
+            </intent-filter>
+        </activity>
+
+        <!-- ************************************** 配置系统触发的Activity ************************************** -->
+        <!-- NFC Activity::Intent Filter[选择时显示Activity属性]注册系统检测到NFC设备时选择打开 -->
+        <activity
+            android:name="com.gtr.studyproject.activity.ActivityNFC"
+            android:icon="@drawable/nfc_tag"
+            android:label="NFC Study" >
+
+            <!-- Intent 过滤器,声明指定的Intent过滤,当系统发现NFC设备时加入可选操作队列::打开时传入检测的到NFC数据 -->
+            <!-- NFC 检测Intent 过滤器:: NDEF 拥有更高的优先级 -->
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="com.gtr.studyproject.activity.UIActivity" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.nfc.action.NDEF_DISCOVERED" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:mimeType="text/plain" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.nfc.action.TAG_DISCOVERED" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.nfc.action.TECH_DISCOVERED" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <!-- 声明数据 Tech 的技术过滤器 -->
+            <meta-data
+                android:name="android.nfc.action.TECH_DISCOVERED"
+                android:resource="@xml/nfc_tech_filter" />
+        </activity>
+        <activity
+            android:name="com.gtr.studyproject.activity.ActivityNFCFound"
+            android:icon="@drawable/nfc_tag"
+            android:label="NFC Info" >
+            <intent-filter>
+                <action android:name="android.nfc.action.NDEF_DISCOVERED" />
+                <action android:name="android.nfc.action.TECH_DISCOVERED" />
+                <action android:name="android.nfc.action.TAG_DISCOVERED" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.nfc.action.TECH_DISCOVERED"
+                android:resource="@xml/nfc_tech_filter" />
+        </activity>
+
+        <!-- ************************************** Support V4 Test Fragment Activity ************************************** -->
+        <activity
+            android:name="com.gtr.studyproject.activity.v4test.ActivityTabHostFragment"
+            android:label="ActivityTabHostFragment" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="com.gtr.studyproject.activity.v4test.FRAGEMENT_ACTIVITY" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.gtr.studyproject.activity.v4test.ActivityViewPagerFragment"
+            android:label="ActivityViewPagerFragment" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="com.gtr.studyproject.activity.v4test.FRAGEMENT_ACTIVITY" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.gtr.studyproject.activity.v4test.ActivityMenu"
+            android:label="ActivityMenu" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="com.gtr.studyproject.activity.v4test.FRAGEMENT_ACTIVITY" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.gtr.studyproject.activity.v4test.ActivityDialog"
+            android:label="ActivityDialog" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="com.gtr.studyproject.activity.v4test.FRAGEMENT_ACTIVITY" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.gtr.studyproject.activity.v4test.ActivitySwipeRefreshLayout"
+            android:label="ActivitySwipeRefreshLayout" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="com.gtr.studyproject.activity.v4test.FRAGEMENT_ACTIVITY" />
+            </intent-filter>
+        </activity>
+        <!-- Service::[本地远程服务都必须要声明服务] -->
+        <service android:name="com.gtr.studyproject.service.ServiceMessage" >
+        </service>
+
+        <!-- ******************************************** Support V4 Demo ******************************************** -->
+        <activity
+            android:name="com.example.android.supportv4.Support4Demos"
+            android:label="Support4Demos" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="com.gtr.studyproject.activity.v4test.FRAGEMENT_ACTIVITY" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.example.android.supportv4.app.SendResult"
+            android:theme="@style/ThemeDialogWhenLarge" >
+        </activity>
+
+        <!-- Fragment Support Samples -->
+        <activity
+            android:name="com.example.android.supportv4.app.FragmentAlertDialogSupport"
+            android:label="@string/fragment_alert_dialog_support" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="com.example.android.supportv4.SUPPORT4_SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.example.android.supportv4.app.FragmentArgumentsSupport"
+            android:label="@string/fragment_arguments_support" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="com.example.android.supportv4.SUPPORT4_SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.example.android.supportv4.app.FragmentCustomAnimationSupport"
+            android:label="@string/fragment_custom_animation_support" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="com.example.android.supportv4.SUPPORT4_SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.example.android.supportv4.app.FragmentHideShowSupport"
+            android:label="@string/fragment_hide_show_support"
+            android:windowSoftInputMode="stateUnchanged" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="com.example.android.supportv4.SUPPORT4_SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.example.android.supportv4.app.FragmentContextMenuSupport"
+            android:label="@string/fragment_context_menu_support" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="com.example.android.supportv4.SUPPORT4_SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.example.android.supportv4.app.FragmentDialogSupport"
+            android:label="@string/fragment_dialog_support" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="com.example.android.supportv4.SUPPORT4_SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.example.android.supportv4.app.FragmentDialogOrActivitySupport"
+            android:label="@string/fragment_dialog_or_activity_support" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="com.example.android.supportv4.SUPPORT4_SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.example.android.supportv4.app.FragmentLayoutSupport"
+            android:label="@string/fragment_layout_support" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="com.example.android.supportv4.SUPPORT4_SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.example.android.supportv4.app.FragmentListArraySupport"
+            android:label="@string/fragment_list_array_support" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="com.example.android.supportv4.SUPPORT4_SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.example.android.supportv4.app.FragmentLayoutSupport$DetailsActivity" />
+        <activity
+            android:name="com.example.android.supportv4.app.FragmentMenuSupport"
+            android:label="@string/fragment_menu_support" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="com.example.android.supportv4.SUPPORT4_SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.example.android.supportv4.app.FragmentNestingTabsSupport"
+            android:label="@string/fragment_nesting_tabs_support" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="com.example.android.supportv4.SUPPORT4_SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.example.android.supportv4.app.FragmentRetainInstanceSupport"
+            android:label="@string/fragment_retain_instance_support" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="com.example.android.supportv4.SUPPORT4_SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.example.android.supportv4.app.FragmentReceiveResultSupport"
+            android:label="@string/fragment_receive_result_support" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="com.example.android.supportv4.SUPPORT4_SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.example.android.supportv4.app.FragmentStackSupport"
+            android:label="@string/fragment_stack_support" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="com.example.android.supportv4.SUPPORT4_SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.example.android.supportv4.app.FragmentTabs"
+            android:label="@string/fragment_tabs" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="com.example.android.supportv4.SUPPORT4_SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.example.android.supportv4.app.FragmentTabsPager"
+            android:label="@string/fragment_tabs_pager" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="com.example.android.supportv4.SUPPORT4_SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.example.android.supportv4.app.FragmentPagerSupport"
+            android:label="@string/fragment_pager_support" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="com.example.android.supportv4.SUPPORT4_SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.example.android.supportv4.app.FragmentStatePagerSupport"
+            android:label="@string/fragment_state_pager_support" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="com.example.android.supportv4.SUPPORT4_SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.example.android.supportv4.app.LoaderCursorSupport"
+            android:label="@string/loader_cursor_support" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="com.example.android.supportv4.SUPPORT4_SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.example.android.supportv4.app.LoaderRetainedSupport"
+            android:label="@string/loader_retained_support" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="com.example.android.supportv4.SUPPORT4_SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.example.android.supportv4.app.LoaderCustomSupport"
+            android:label="@string/loader_custom_support" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="com.example.android.supportv4.SUPPORT4_SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.example.android.supportv4.app.LoaderThrottleSupport"
+            android:label="@string/loader_throttle_support" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="com.example.android.supportv4.SUPPORT4_SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+
+        <provider
+            android:name="com.example.android.supportv4.app.LoaderThrottleSupport$SimpleProvider"
+            android:authorities="com.example.android.apis.supportv4.app.LoaderThrottle"
+            android:exported="false" />
+
+        <activity
+            android:name="com.example.android.supportv4.content.LocalServiceBroadcaster"
+            android:label="@string/local_service_broadcaster" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="com.example.android.supportv4.SUPPORT4_SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.example.android.supportv4.content.SimpleWakefulController"
+            android:label="@string/simple_wakeful_controller" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="com.example.android.supportv4.SUPPORT4_SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+
+        <receiver android:name="com.example.android.supportv4.content.SimpleWakefulReceiver" />
+
+        <service android:name="com.example.android.supportv4.content.SimpleWakefulService" />
+
+        <activity
+            android:name="com.example.android.supportv4.accessibility.AccessibilityManagerSupportActivity"
+            android:label="@string/accessibility_manager_title" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="com.example.android.supportv4.SUPPORT4_SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.example.android.supportv4.accessibility.AccessibilityDelegateSupportActivity"
+            android:label="@string/accessibility_delegate_title" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="com.example.android.supportv4.SUPPORT4_SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.example.android.supportv4.app.SharingSupport"
+            android:label="@string/sharing_support_title" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="com.example.android.supportv4.SUPPORT4_SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.example.android.supportv4.app.SharingReceiverSupport"
+            android:label="@string/sharing_receiver_title" >
+            <intent-filter>
+                <action android:name="android.intent.action.SEND" />
+                <action android:name="android.intent.action.SEND_MULTIPLE" />
+
+                <data android:mimeType="text/plain" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.example.android.supportv4.text.BidiFormatterSupport"
+            android:label="@string/bidiformatter_support_title" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="com.example.android.supportv4.SUPPORT4_SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.example.android.supportv4.widget.DrawerLayoutActivity"
+            android:label="@string/drawer_layout_support" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="com.example.android.supportv4.SUPPORT4_SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.example.android.supportv4.widget.SwipeRefreshLayoutActivity"
+            android:label="@string/swipe"
+            android:theme="@style/ThemeHoloLight" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="com.example.android.supportv4.SUPPORT4_SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.example.android.supportv4.widget.ContentLoadingProgressBarActivity"
+            android:label="@string/content_loading_progress_bar" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="com.example.android.supportv4.SUPPORT4_SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.example.android.supportv4.widget.SlidingPaneLayoutActivity"
+            android:label="@string/sliding_pane_layout_support" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="com.example.android.supportv4.SUPPORT4_SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.example.android.supportv4.widget.ExploreByTouchHelperActivity"
+            android:label="@string/explore_by_touch_helper_support" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="com.example.android.supportv4.SUPPORT4_SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <!-- ******************************************** Android SDK Demo ******************************************** -->
+        <activity
+            android:name="com.example.android.RepeatingAlarm"
+            android:label="RepeatingAlarm" >
+            <intent-filter>
+                <action android:name="com.example.android.sdk20.ACTION" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.example.android.BaseNetworking"
+            android:label="BaseNetworking" >
+            <intent-filter>
+                <action android:name="com.example.android.sdk20.ACTION" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.example.android.basicsyncadapter.BasicSyncAdapterSample"
+            android:label="BasicSyncAdapterSample" >
+            <intent-filter>
+                <action android:name="com.example.android.sdk20.ACTION" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.example.android.cardemulation.CardEmulationSample"
+            android:label="CardEmulationSample" >
+            <intent-filter>
+                <action android:name="com.example.android.sdk20.ACTION" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.example.android.cardreader.CardReaderSample"
+            android:label="CardReaderSample" >
+            <intent-filter>
+                <action android:name="com.example.android.sdk20.ACTION" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.example.android.storageclient.StorageClientSample"
+            android:label="StorageClientSample" >
+            <intent-filter>
+                <action android:name="com.example.android.sdk20.ACTION" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.example.android.storageprovider.StorageProviderSample"
+            android:label="StorageProviderSample" >
+            <intent-filter>
+                <action android:name="com.example.android.sdk20.ACTION" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.example.android.basicgesturedetect.BasicGestureDetectSample"
+            android:label="BasicGestureDetectSample" >
+            <intent-filter>
+                <action android:name="com.example.android.sdk20.ACTION" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.example.android.basicmultitouch.BasicMultitouchSample"
+            android:label="BasicMultitouchSample" >
+            <intent-filter>
+                <action android:name="com.example.android.sdk20.ACTION" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.example.android.basicmediadecoder.BasicMediaDecoderSample"
+            android:label="BasicMediaDecoderSample" >
+            <intent-filter>
+                <action android:name="com.example.android.sdk20.ACTION" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.example.android.basicmediadecoder.BasicMediaRouterSample"
+            android:label="BasicMediaRouterSample" >
+            <intent-filter>
+                <action android:name="com.example.android.sdk20.ACTION" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.example.android.basicmediadecoder.MediaRecorderSample"
+            android:label="MediaRecorderSample"
+            android:screenOrientation="landscape" >
+            <intent-filter>
+                <action android:name="com.example.android.sdk20.ACTION" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.example.android.xmladapters.ContactsListActivity"
+            android:label="Xml Contacts Adapter" >
+            <intent-filter>
+                <action android:name="com.example.android.sdk20.ACTION" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.example.android.xmladapters.PhotosListActivity"
+            android:label="Xml Photos Adapter" >
+            <intent-filter>
+                <action android:name="com.example.android.sdk20.ACTION" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.example.android.xmladapters.RssReaderActivity"
+            android:label="Xml RSS Reader" >
+            <intent-filter>
+                <action android:name="com.example.android.sdk20.ACTION" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.example.android.basicmediadecoder.MediaRouterSample"
+            android:label="MediaRouterSample"
+            android:screenOrientation="landscape" >
+            <intent-filter>
+                <action android:name="com.example.android.sdk20.ACTION" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="com.example.android.supportv7.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.example.android.voicemail.ActivityAddVoicemail"
+            android:label="ActivityAddVoicemail"
+            android:screenOrientation="landscape" >
+            <intent-filter>
+                <action android:name="com.example.android.sdk17.ACTION" />
+            </intent-filter>
+        </activity>
+
+        <receiver android:name="com.example.android.basicmediadecoder.SampleMediaButtonReceiver" >
+            <intent-filter>
+                <action android:name="android.intent.action.MEDIA_BUTTON" />
+            </intent-filter>
+        </receiver>
+
+        <service
+            android:name="com.example.android.basicmediadecoder.SampleMediaRouteProviderService"
+            android:label="@string/sample_media_route_provider_service"
+            android:process=":mrp" >
+            <intent-filter>
+                <action android:name="android.media.MediaRouteProviderService" />
+            </intent-filter>
+        </service>
+        <!-- ******************************************** Baidu Map Demo ******************************************** -->
+        <activity
+            android:name="baidumapsdk.demo.BaseMapDemo"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="@string/demo_name_basemap"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="baidumapsdk.demo.FragmentTableActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="@string/demo_name_basemap"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="baidumapsdk.demo.MapFragmentDemo"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="@string/demo_name_map_fragment"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="baidumapsdk.demo.MultiMapViewDemo"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="@string/demo_name_multimap"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="baidumapsdk.demo.GeometryDemo"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="@string/demo_name_geometry"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="baidumapsdk.demo.LocationDemo"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="@string/demo_name_location"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="baidumapsdk.demo.MapControlDemo"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="@string/demo_name_control"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="baidumapsdk.demo.UISettingDemo"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="@string/demo_name_ui"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="baidumapsdk.demo.LayersDemo"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="@string/demo_name_layers"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="baidumapsdk.demo.OverlayDemo"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="@string/demo_name_overlay"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="baidumapsdk.demo.OfflineDemo"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="@string/demo_name_offline"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="baidumapsdk.demo.PoiSearchDemo"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="@string/demo_name_poi"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="baidumapsdk.demo.RoutePlanDemo"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="@string/demo_name_route"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="baidumapsdk.demo.GeoCoderDemo"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="@string/demo_name_geocode"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="baidumapsdk.demo.BusLineSearchDemo"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="@string/demo_name_bus"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="baidumapsdk.demo.HeatMapDemo"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="@string/demo_name_heatmap"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="baidumapsdk.demo.ShareDemo"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="@string/demo_name_share"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="baidumapsdk.demo.ShareDemoActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="@string/demo_name_share"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="baidumapsdk.demo.NaviDemo"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="@string/demo_name_navi"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="baidumapsdk.demo.CloudSearchActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="@string/demo_name_cloud"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="baidumapsdk.demo.CloudSearchDemo"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="@string/title_activity_cloud_search_demo"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="baidumapsdk.demo.OpenglDemo"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="@string/demo_name_opengl"
+            android:screenOrientation="portrait" >
+        </activity>
+        <!-- ******************************************** Bitmap Fun Demo ******************************************** -->
+        <activity
+            android:name="com.example.android.bitmapfun.ui.ImageDetailActivity"
+            android:theme="@style/AppTheme.FullScreen" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.android.bitmapfun.ui.ImageGridActivity" />
+        </activity>
+        <activity
+            android:name="com.example.android.bitmapfun.ui.ImageGridActivityLocal"
+            android:theme="@style/AppTheme.FullScreen" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.android.bitmapfun.ui.ImageGridActivity" />
+        </activity>
+        <activity
+            android:name="com.example.android.bitmapfun.ui.CopyOfImageGridActivity"
+            android:theme="@style/AppTheme.FullScreen" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.android.bitmapfun.ui.ImageGridActivity" />
+        </activity>
+
+        <provider
+            android:name="com.example.android.supportv4.content.SharingSupportProvider"
+            android:authorities="com.example.supportv4.content.sharingsupportprovider"
+            android:exported="false" />
+
+        <!-- FileProvider Example -->
+
+        <activity
+            android:name="com.example.android.supportv4.content.FileProviderExample"
+            android:label="@string/file_provider_example" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="com.example.android.supportv4.SUPPORT4_SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="com.example.android.supportv4.my_files"
+            android:exported="false"
+            android:grantUriPermissions="true" >
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/my_paths" />
+        </provider>
+
+        <activity
+            android:name="com.example.android.supportv4.media.TransportControllerActivity"
+            android:label="@string/sample_transport_controller_activity" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="com.example.android.supportv4.SUPPORT4_SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <!-- **************************** Support V4 Navigation **************************** -->
+        <activity
+            android:name="com.example.android.support.appnavigation.app.AppNavHomeActivity"
+            android:label="@string/app_nav_home_label" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="com.gtr.studyproject.activity.v4test.FRAGEMENT_ACTIVITY" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.example.android.support.appnavigation.app.SimpleUpActivity"
+            android:label="@string/simple_up_label" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.android.support.appnavigation.app.AppNavHomeActivity" />
+        </activity>
+        <activity
+            android:name="com.example.android.support.appnavigation.app.PeerActivity"
+            android:label="@string/peer_label" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.android.support.appnavigation.app.AppNavHomeActivity" />
+        </activity>
+        <activity
+            android:name="com.example.android.support.appnavigation.app.ViewFromOtherTaskActivity"
+            android:label="@string/view_from_other_task_label" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.android.support.appnavigation.app.AppNavHomeActivity" />
+        </activity>
+        <activity
+            android:name="com.example.android.support.appnavigation.app.OutsideTaskActivity"
+            android:label="@string/outside_task_label"
+            android:taskAffinity="com.example.android.appnavigation.outsidetask"
+            android:theme="@style/Theme.Light" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.example.android.support.appnavigation.app.ContentViewActivity"
+            android:label="@string/content_view_label" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <action android:name="android.intent.action.VIEW" />
+
+                <data android:mimeType="application/x-example" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.android.support.appnavigation.app.ContentCategoryActivity" />
+        </activity>
+        <activity
+            android:name="com.example.android.support.appnavigation.app.ContentCategoryActivity"
+            android:label="@string/content_category_label" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.android.support.appnavigation.app.AppNavHomeActivity" />
+        </activity>
+        <activity
+            android:name="com.example.android.support.appnavigation.app.NotificationsActivity"
+            android:label="@string/notifications_label" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.android.support.appnavigation.app.AppNavHomeActivity" />
+        </activity>
+        <!-- **************************** Activity Dialog Activity对话框 **************************** -->
+        <activity
+            android:name="com.example.android.support.appnavigation.app.InterstitialMessageActivity"
+            android:excludeFromRecents="true"
+            android:label="@string/interstitial_label"
+            android:launchMode="singleTask"
+            android:taskAffinity=""
+            android:theme="@style/Theme.Dialog" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+        </activity>
+        <!-- Windows Level Dialog -->
+        <activity
+            android:name="com.gtr.studyproject.activity.ActivityNotification$WindowsLevelMessageDialogActivity"
+            android:excludeFromRecents="true"
+            android:launchMode="singleTask"
+            android:taskAffinity=""
+            android:theme="@android:style/Theme.Dialog" >
+        </activity>
+        <!-- Lock Screen Over Activity -->
+        <activity
+            android:name="com.gtr.studyproject.activity.ActivityNotification$WindowsLevelActivityOverLockScreen"
+            android:excludeFromRecents="true"
+            android:launchMode="singleTask"
+            android:taskAffinity=""
+            android:theme="@android:style/Theme.Wallpaper.NoTitleBar" >
+        </activity>
+        <!-- **************************** Reveiver 广播接收器 **************************** -->
+        <receiver
+            android:name="com.gtr.studyproject.reveiver.BroadcastReceiverBootTime"
+            android:enabled="true"
+            android:exported="false"
+            android:permission="android.permission.RECEIVE_BOOT_COMPLETED" >
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.intent.action.QUICKBOOT_POWERON" />
+            </intent-filter>
+        </receiver>
+        <!-- Admin授权广播接收器 -->
+        <receiver
+            android:name="com.gtr.studyproject.activity.ActivityNotification$LockScreenDeviceAdminReceiver"
+            android:permission="android.permission.BIND_DEVICE_ADMIN" >
+            <meta-data
+                android:name="android.app.device_admin"
+                android:resource="@xml/lock_screen_meta_data" />
+
+            <intent-filter>
+                <action android:name="android.app.action.DEVICE_ADMIN_ENABLED" />
+            </intent-filter>
+        </receiver>
+        <!-- The widget provider -->
+        <receiver android:name="com.example.android.weatherlistwidget.WeatherWidgetProvider" >
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+            <!-- This specifies the widget provider info -->
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/widgetinfo" />
+        </receiver>
+
+        <!-- The service serving the RemoteViews to the collection widget -->
+        <service
+            android:name="com.example.android.weatherlistwidget.WeatherWidgetService"
+            android:exported="false"
+            android:permission="android.permission.BIND_REMOTEVIEWS" />
+
+        <!-- The content provider serving the (fake) weather data -->
+        <provider
+            android:name="com.example.android.weatherlistwidget.WeatherDataProvider"
+            android:authorities="com.example.android.weatherlistwidget.provider" />
+
+        <service
+            android:name="com.gtr.studyproject.reveiver.BroadcastReceiverBootTime$BootTimeService"
+            android:label="@string/app_name" />
+        <service android:name="com.gtr.studyproject.activity.ActivityNotification$ServicePostWindowsAlert" />
+        <!-- **************************** Service 绑定服务 **************************** -->
+        <service
+            android:name="com.example.android.supportv4.content.LocalServiceBroadcaster$LocalService"
+            android:stopWithTask="true" />
+        <!-- Baidu 定位LBS服务 -->
+        <service
+            android:name="com.baidu.location.f"
+            android:enabled="true"
+            android:process=":remote" />
+        <!-- 账号同步校验后台服务 -->
+        <service android:name="LoginAccountAuthenticator" />
+        <service
+            android:name="com.gtr.studyproject.service.ServiceLogin"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="android.content.SyncAdapter" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.content.SyncAdapter"
+                android:resource="@xml/service_login_sync_adapter" />
+        </service>
+        <!-- **************************** Provider 内容供应者 **************************** -->
+        <provider
+            android:name="com.gtr.studyproject.activity.ActivityCursorAdapter$TestAccountAnnotationContentProvider"
+            android:authorities="com.gtr.studyproject.activity.AnnotationProvider"
+            android:exported="false" >
+        </provider>
+        <!-- **************************** Android SDK Provider/Service **************************** -->
+        <provider
+            android:name="com.example.android.basicsyncadapter.provider.FeedProvider"
+            android:authorities="com.example.android.basicsyncadapter"
+            android:exported="false" />
+        <!-- XML解析内容供应者 -->
+        <provider
+            android:name="com.example.android.xmladapters.XmlDocumentProvider"
+            android:authorities="xmldocument" />
+
+        <service
+            android:name="com.example.android.basicsyncadapter.SyncService"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="android.content.SyncAdapter" />
+            </intent-filter>
+            <!-- This points to a required XML file which describes our SyncAdapter. -->
+            <meta-data
+                android:name="android.content.SyncAdapter"
+                android:resource="@xml/syncadapter" />
+        </service>
+        <service android:name="com.example.android.common.accounts.GenericAccountService" >
+
+            <!-- Required filter used by the system to launch our account service. -->
+            <intent-filter>
+                <action android:name="android.accounts.AccountAuthenticator" />
+            </intent-filter>
+            <!-- This points to an XMLf ile which describes our account service. -->
+            <meta-data
+                android:name="android.accounts.AccountAuthenticator"
+                android:resource="@xml/authenticator" />
+        </service>
+    </application>
+
+</manifest>

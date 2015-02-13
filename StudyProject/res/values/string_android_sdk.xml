@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="sample_action">Set Alarm</string>
+    <string name="test_text">Test</string>
+    <string name="clear_text">Clear</string>
+    <string name="wifi_connection">The active connection is wifi.</string>
+    <string name="mobile_connection">The active connection is mobile.</string>
+    <string name="no_wifi_or_mobile">No wireless or mobile connection.</string>
+    <string name="account_name">FeedSync Service</string>
+    <string name="title_entry_detail">Entry Detail</string>
+    <string name="loading">Waiting for sync...</string>
+    <string name="description_refresh">Refresh</string>
+    <string name="card_title">Card Title</string>
+    <string name="account_number">656236521023656236</string>
+    <string name="service_name">Car Emulation Service</string>
+    <string name="sample_show_log">Show Log</string>
+    <string name="sample_hide_log">Hide Log</string>
+    <string name="log_in">Log in</string>
+    <string name="log_out">Log out</string>
+    <string name="logged_in_info">You are currently logged in, which means the documents in MyCloud are visible to other applications.</string>
+    <string name="logged_out_info">You are currently logged out, so MyCloud is not visible as a document provider.</string>
+    <string name="root_summary">cloudy with a chance of &#8230;</string>
+    <string name="key_logged_in">logged_in</string>
+
+    <array name="image_res_ids">
+        <item>@raw/android_dinner</item>
+        <item>@raw/android_rose</item>
+        <item>@raw/android_pumpkins_fall</item>
+        <item>@raw/android_computer_back</item>
+        <item>@raw/android_computer_android_studio</item>
+    </array>
+    <array name="text_res_ids">
+        <item>@raw/cat_names</item>
+        <item>@raw/dog_names</item>
+    </array>
+    <array name="docx_res_ids">
+        <item>@raw/example</item>
+    </array>
+
+    <string name="app_video_attrib">(c) copyright 2008, Blender Foundation / www.bigbuckbunny.org</string>
+    <string name="menu_present_to">Present to</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="secondary_connected">Connected to:\n%s</string>
+    <string name="secondary_notconnected">No secondary display connected.</string>
+    <string name="change_color">Change Color</string>
+    <string name="display_name">This display is: %s</string>
+    <string name="display_color">Background color: #%X</string>
+    <string name="btnCapture">capture</string>
+    <string name="sample_media_router_text">This activity demonstrates how to
+            use MediaRouter from the support library.  Select a route from the action bar.</string>
+    <string name="media_route_menu_title">Play on...</string>
+    <string name="library_tab_text">Library</string>
+    <string name="playlist_tab_text">Playlist</string>
+    <string name="statistics_tab_text">Statistics</string>
+    <string name="sample_media_route_provider_service">Media Route Provider Service Support Library Sample</string>
+    <string name="fixed_volume_route_name">Fixed Volume Remote Playback Route</string>
+    <string name="variable_volume_basic_route_name">Variable Volume (Basic) Remote Playback Route</string>
+    <string name="variable_volume_queuing_route_name">Variable Volume (Queuing) Remote Playback Route</string>
+    <string name="variable_volume_session_route_name">Variable Volume (Session) Remote Playback Route</string>
+    <string name="sample_route_description">Sample route</string>
+    <string name="sample_media_route_provider_remote">Remote Playback (Simulated)</string>
+    <string name="sample_media_route_activity_local">Local Playback</string>
+    <string name="sample_media_route_activity_presentation">Local Playback on Presentation Display</string>
+    <string name="playlist_item_added_text">Added to playlist!</string>
+    <string name="playlist_item_removed_text">Removed from playlist</string>
+
+    <string-array name="media_names">
+        <item>Big Buck Bunny</item>
+        <item>Elephants Dream</item>
+        <item>Sintel</item>
+        <item>Tears of Steel</item>
+    </string-array>
+    <string-array name="media_uris">
+        <item>http://archive.org/download/BigBuckBunny_328/BigBuckBunny_512kb.mp4</item>
+        <item>http://archive.org/download/ElephantsDream_277/elephant_dreams_640_512kb.mp4</item>
+        <item>http://archive.org/download/Sintel/sintel-2048-stereo_512kb.mp4</item>
+        <item>http://archive.org/download/Tears-of-Steel/tears_of_steel_720p.mp4</item>
+    </string-array>
+    <string-array name="results_type_entries">
+        <item>Letters</item>
+        <item>Numbers</item>
+    </string-array>
+    <string-array name="results_type_values">
+        <item>0</item>
+        <item>1</item>
+    </string-array>
+
+    <string name="add_voicemail">Add voicemail</string>
+    <string name="sender_number">Sender phone number</string>
+    <string name="time">Time in DD/MM/YYYY hh:mm</string>
+    <string name="duration">Duration in seconds</string>
+    <string name="mime_type">MIME type</string>
+    <string name="voicemail_store_error">Error in storing voicemail!</string>
+    <string name="send">Send</string>
+    <string name="record_voice">Record voice</string>
+    <string name="no_contacts">No contacts available</string>
+    <string name="no_photos">Loading photos&#8230;</string>
+    <string name="no_rss_feed">Loading RSS feed&#8230;</string>
+    <string name="empty_view_text">No cities found&#8230;</string>
+    <string name="toast_format_string">%1$s!</string>
+    <string name="item_format_string">%1$d\u00B0 on %2$s</string>
+    <string name="header_format_string">%1$d\u00B0 in %2$s</string>
+    <string name="refresh">Refresh</string>
+    <string name="city_name">San Francisco</string>
+
+</resources>

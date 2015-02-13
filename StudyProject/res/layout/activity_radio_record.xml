@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:xiaotian="http://schemas.framework.xiaotian.com/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <view
+        android:id="@id/id_0"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        class="com.gtr.studyproject.activity.ActivityRadioRecord$RecordButton"
+        android:textSize="16sp"
+        xiaotian:normalText="Press Record"
+        xiaotian:pressedText="Recording..." />
+
+    <ListView
+        android:id="@id/id_1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+    </ListView>
+
+</LinearLayout>

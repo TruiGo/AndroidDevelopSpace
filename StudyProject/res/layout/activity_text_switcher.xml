@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <TextSwitcher
+        android:id="@id/id_0"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+    </TextSwitcher>
+
+    <ImageSwitcher
+        android:id="@id/id_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+    </ImageSwitcher>
+
+    <ListView
+        android:id="@id/id_2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+    </ListView>
+
+</LinearLayout>

@@ -1,0 +1,36 @@
+<!DOCTYPE html PUBliC "-//W3C//dtD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/dtD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title>demo</title>
+		<script type="text/javascript">
+			// JS GetList
+			function GetList(){
+				var i=window.javatojs.getSize();
+				for(var n=0;n<i;n++){
+					var jsdata= window.javatojs.GetObject(n);//拿到activity里面的属性javadata
+					var datalistdiv = document.getElementById("datalist"); //得到页面的div
+					pnode = document.createElement("p");//创建一个p标签，再建个textnode
+					tnode = document.createTextNode(jsdata);
+					pnode.appendChild(tnode);//p中加入数据
+					datalistdiv.appendChild(pnode);//div中键入新的p
+				}
+			}
+			// 获取电话号码回显
+			function ShowPhoneNumber(phone){
+				var datalistdiv = document.getElementById("datalist"); //得到页面的div
+				pnode = document.createElement("p");//创建一个p标签，再建个textnode
+				tnode = document.createTextNode("获取到的电话号码为:"+phone);
+				pnode.appendChild(tnode);//p中加入数据
+				datalistdiv.appendChild(pnode);//div中键入新的p
+			}
+		</script>
+	</head>
+	<!-- 调用绑定TAG[javatojs]方法的方法 -->
+	<body onload="javascript:window.javatojs.Callfunction()">
+		<p>This is p Tag Test text.</p>
+		<!-- 调用绑定TAG[javatojs]方式获取电话号码方法 -->
+		<a onClick="window.javatojs.GetPhoneNumber()">点击获取PhoneNumber</a><br/>
+		<div id="datalist" > </div>
+	</body>
+</html>

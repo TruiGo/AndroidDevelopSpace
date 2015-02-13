@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <!-- ActionProvider -->
+    <item
+        android:id="@id/id_3"
+        android:actionProviderClass="com.gtr.studyproject.activity.ActivityActionBar$IconActionProvider"
+        android:showAsAction="ifRoom|withText"
+        android:title="ICOProvider"/>
+    <!-- showAsAction:ifRoom有空间显示,无空间隐藏,withText显示文本, -->
+    <item
+        android:id="@id/id_0"
+        android:showAsAction="ifRoom|withText"
+        android:title="Settings"/>
+    <item
+        android:id="@id/id_1"
+        android:showAsAction="ifRoom|withText"
+        android:title="About"/>
+    <item
+        android:id="@id/id_2"
+        android:showAsAction="ifRoom|withText"
+        android:title="Help"/>
+    <!-- 长按提示title -->
+    <item
+        android:id="@id/id_3"
+        android:icon="@drawable/icon_marka"
+        android:showAsAction="ifRoom"
+        android:title="Icon Action"/>
+    <item
+        android:id="@id/id_4"
+        android:actionProviderClass="com.gtr.studyproject.activity.ActivityActionBar$SubMenuActionProvider"
+        android:showAsAction="ifRoom"
+        android:title="SubActionProivider"/>
+    <item
+        android:id="@id/id_5"
+        android:actionProviderClass="android.widget.ShareActionProvider"
+        android:showAsAction="ifRoom"
+        android:title="ShareProvider"/>
+    <!-- Action Layout 展开Action Bar 的 Layout -->
+    <item
+        android:id="@id/id_6"
+        android:actionLayout="@layout/menu_activity_action_bar_collapse"
+        android:showAsAction="ifRoom|collapseActionView"
+        android:title="Collapse">
+    </item>
+
+</menu>

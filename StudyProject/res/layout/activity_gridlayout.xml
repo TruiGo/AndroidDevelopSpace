@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <GridLayout
+            android:id="@id/id_0"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:columnCount="2"
+            android:orientation="horizontal"
+            android:rowCount="2" >
+
+            <!-- 2x2 Grid -->
+            <!-- don't have layout_width and layout_height properties. -->
+            <!--
+because GridLayout uses the layout_gravity property for determining the size
+of cells instead of layout_width and layout_height properties.
+            -->
+            <!-- 不指定Index,由GridLayout自动匹配位置 -->
+
+            <TextView
+                android:text="Cell 1,1"
+                android:textAppearance="?android:attr/textAppearanceLarge" />
+
+            <TextView
+                android:text="Cell 1,2"
+                android:textAppearance="?android:attr/textAppearanceLarge" />
+
+            <TextView
+                android:text="Cell 2,1"
+                android:textAppearance="?android:attr/textAppearanceLarge" />
+
+            <TextView
+                android:text="Cell 2,2"
+                android:textAppearance="?android:attr/textAppearanceLarge" />
+        </GridLayout>
+        <!-- input grid -->
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="10dp"
+            android:background="#FFFFFF" />
+
+        <GridLayout
+            android:id="@id/id_1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="#FFFFFF"
+            android:columnCount="2" >
+
+            <TextView
+                android:layout_gravity="right"
+                android:text="Username:"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="#000000" />
+
+            <EditText android:ems="10" />
+
+            <TextView
+                android:text="Password:"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="#000000" />
+
+            <EditText android:ems="10" />
+
+            <Button
+                android:layout_columnSpan="2"
+                android:layout_gravity="center_horizontal"
+                android:text="Submit..." />
+        </GridLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="10dp"
+            android:background="#FFFFFF" />
+
+        <GridLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            android:columnCount="3"
+            android:rowCount="6" >
+
+            <TextView
+                android:text="[1,1]"
+                android:textAppearance="?android:attr/textAppearanceLarge" />
+
+            <TextView
+                android:text="[1,2]"
+                android:textAppearance="?android:attr/textAppearanceLarge" />
+
+            <TextView
+                android:text="[1,3]"
+                android:textAppearance="?android:attr/textAppearanceLarge" />
+
+            <TextView
+                android:text="[2,1]"
+                android:textAppearance="?android:attr/textAppearanceLarge" />
+
+            <TextView
+                android:text="[2,2]"
+                android:textAppearance="?android:attr/textAppearanceLarge" />
+
+            <TextView
+                android:text="[2,3]"
+                android:textAppearance="?android:attr/textAppearanceLarge" />
+
+            <TextView
+                android:text="[3,1]"
+                android:textAppearance="?android:attr/textAppearanceLarge" />
+
+            <TextView
+                android:text="[3,2]"
+                android:textAppearance="?android:attr/textAppearanceLarge" />
+
+            <TextView
+                android:text="[3,3]"
+                android:textAppearance="?android:attr/textAppearanceLarge" />
+            <!-- 设置Row,Column Index索引 -->
+
+            <TextView
+                android:layout_column="2"
+                android:layout_row="3"
+                android:text="[4,3]"
+                android:textAppearance="?android:attr/textAppearanceLarge" />
+
+            <TextView
+                android:layout_column="0"
+                android:layout_row="3"
+                android:text="[4,1]"
+                android:textAppearance="?android:attr/textAppearanceLarge" />
+
+            <TextView
+                android:layout_column="1"
+                android:layout_row="3"
+                android:text="[4,2]"
+                android:textAppearance="?android:attr/textAppearanceLarge" />
+            <!-- 设置Row,Column索引 -->
+
+            <TextView
+                android:layout_column="2"
+                android:layout_row="4"
+                android:text="[5,3]"
+                android:textAppearance="?android:attr/textAppearanceLarge" />
+            <!-- 设置Row,Column索引 -->
+
+            <TextView
+                android:layout_column="0"
+                android:layout_row="5"
+                android:text="[6,1]"
+                android:textAppearance="?android:attr/textAppearanceLarge" />
+            <!-- 不设置Row,Column索引,自动添加到当前位置 -->
+
+            <TextView
+                android:text="[不设置Index]"
+                android:textAppearance="?android:attr/textAppearanceLarge" />
+
+            <TextView
+                android:layout_column="2"
+                android:layout_row="5"
+                android:text="[6,3]"
+                android:textAppearance="?android:attr/textAppearanceLarge" />
+        </GridLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="10dp"
+            android:background="#FFFFFF" />
+
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:columnCount="3"
+            android:rowCount="3" >
+
+            <TextView
+                android:text="[1,1]"
+                android:textAppearance="?android:attr/textAppearanceLarge" />
+            <!-- RowSpan 跨2列 -->
+
+            <TextView
+                android:layout_gravity="fill"
+                android:layout_rowSpan="2"
+                android:gravity="center"
+                android:text="(RowSpan 2)[1,2]"
+                android:textAppearance="?android:attr/textAppearanceLarge" />
+
+            <TextView
+                android:text="[1,3]"
+                android:textAppearance="?android:attr/textAppearanceLarge" />
+
+            <TextView
+                android:text="[2,1]"
+                android:textAppearance="?android:attr/textAppearanceLarge" />
+
+            <TextView
+                android:text="[2,2]"
+                android:textAppearance="?android:attr/textAppearanceLarge" />
+
+            <TextView
+                android:text="[3,1]"
+                android:textAppearance="?android:attr/textAppearanceLarge" />
+
+            <TextView
+                android:text="[3,2]"
+                android:textAppearance="?android:attr/textAppearanceLarge" />
+
+            <TextView
+                android:text="[3,3]"
+                android:textAppearance="?android:attr/textAppearanceLarge" />
+        </GridLayout>
+        <!-- Space 空白View填充 -->
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="10dp"
+            android:background="#FFFFFF" />
+
+        <GridLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            android:columnCount="3"
+            android:rowCount="3" >
+
+            <TextView
+                android:text="[1,1]"
+                android:textAppearance="?android:attr/textAppearanceLarge" />
+            <!-- 用Space指定填充 -->
+
+            <Space
+                android:layout_column="1"
+                android:layout_columnSpan="2"
+                android:layout_gravity="fill"
+                android:layout_row="0" />
+
+            <TextView
+                android:text="[2,1]"
+                android:textAppearance="?android:attr/textAppearanceLarge" />
+            <!-- 用Space自动填充 -->
+
+            <Space android:textAppearance="?android:attr/textAppearanceLarge" />
+
+            <TextView
+                android:text="[2,3]"
+                android:textAppearance="?android:attr/textAppearanceLarge" />
+
+            <TextView
+                android:text="[3,1]"
+                android:textAppearance="?android:attr/textAppearanceLarge" />
+
+            <TextView
+                android:text="[3,2]"
+                android:textAppearance="?android:attr/textAppearanceLarge" />
+
+            <TextView
+                android:text="[3,3]"
+                android:textAppearance="?android:attr/textAppearanceLarge" />
+        </GridLayout>
+    </LinearLayout>
+
+</ScrollView>

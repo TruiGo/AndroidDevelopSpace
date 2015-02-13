@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 配置游标适配器 -->
+<cursor-adapter xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res/com.gtr.studyproject.activity"
+    app:layout="@layout/contact_item"
+    app:selection="has_phone_number=1"
+    app:uri="content://com.android.contacts/contacts" >
+
+    <!-- 绑定字段 -->
+    <bind
+        app:as="string"
+        app:from="display_name"
+        app:to="@id/name" />
+    <!-- 绑定头像 -->
+    <bind
+        app:as="drawable"
+        app:from="starred"
+        app:to="@id/star" >
+        <map
+            app:fromValue="0"
+            app:toValue="@android:drawable/star_big_off" />
+        <map
+            app:fromValue="1"
+            app:toValue="@android:drawable/star_big_on" />
+    </bind>
+    <bind
+        app:as="com.example.android.xmladapters.ContactPhotoBinder"
+        app:from="_id"
+        app:to="@id/name" />
+
+</cursor-adapter>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <!-- FrameLayout 布局:: 重叠的布局 -->
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/transparent"
+        android:layoutDirection="rtl"
+        android:text="这个一个TextView 的透明组件"
+        android:textAlignment="textEnd"
+        android:textIsSelectable="false"
+        android:textSize="30pt" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:alpha="0.5"
+        android:background="@android:color/transparent"
+        android:contentDescription="@string/app_name"
+        android:src="@drawable/ic_launcher" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="60.0dip"
+        android:layout_marginTop="20.0dip"
+        android:background="#99000000" />
+
+</FrameLayout>

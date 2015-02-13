@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@id/id_3"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0099cc"
+    tools:context="com.gtr.studyproject.activity.ActivityFragmentManager" >
+
+    <fragment
+        android:id="@id/id_4"
+        android:name="com.gtr.studyproject.activity.ActivityFragmentManager$InnerListFragment"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1" />
+    <fragment
+        android:id="@id/id_5"
+        android:name="com.gtr.studyproject.activity.ActivityFragmentManager$SmallFragment"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1" />
+
+</LinearLayout>

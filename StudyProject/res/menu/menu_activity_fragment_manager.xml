@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <!-- ifRoom 如果够空间就显示,不然就自动收起菜单 -->
+    <item
+        android:id="@+id/id_menu_1"
+        android:showAsAction="ifRoom"
+        android:title="New"/>
+    <item
+        android:id="@+id/id_menu_2"
+        android:showAsAction="ifRoom"
+        android:title="Help"/>
+    <item
+        android:id="@+id/id_menu_3"
+        android:showAsAction="ifRoom"
+        android:title="Home Activity"/>
+    
+    <!-- Search ActionBar Item Edittext View -->
+    <item
+        android:id="@+id/id_menu_search"
+        android:actionLayout="@layout/menu_item_search_action_view"
+        android:showAsAction="always|collapseActionView"
+        android:title="Search"/>
+    
+    <item
+        android:id="@+id/id_menu_provider"
+        android:actionProviderClass="com."
+        android:showAsAction="always|collapseActionView"
+        android:title="Search"/>
+</menu>
